@@ -6,7 +6,7 @@ export class HungryBear {
     this.moodLevel = 0;
   }
 
-// Decrementing Methods for Stats // 
+  // Decrementing Methods for Stats //
 
   setHunger() {
     setInterval(() => {
@@ -15,9 +15,13 @@ export class HungryBear {
       }
     }, 1000);
   }
-  
+
   feed() {
-    return this.foodLevel += 10;
+    return (this.foodLevel += 10);
+  }
+
+  sleep() {
+    return (this.sleepLevel += 10);
   }
   
   gettingTired() {
@@ -25,37 +29,37 @@ export class HungryBear {
       this.sleepLevel--;
     }, 30000);
   }
-  
+
   isBearRested() {
     if (this.sleepLevel === 0) {
       this.gettingAngry();
       if (this.moodLevel >= 20) {
-        return "you die"
+        return "you die";
       }
     }
     // if (this.sleepLevel === 0 ) {
     //   this.moodLevel ++
     // };
   }
-  
+
   gettingAngry() {
     setInterval(() => {
       this.moodLevel++;
     }, 1000);
   }
   love() {
-    return this.moodLevel = 0;
+    return (this.moodLevel = 0);
   }
   // Static Methods //
   didYouGetEaten() {
-    if (this.foodLevel >0) {
+    if (this.foodLevel > 0) {
       return false;
-    } else  if (this.foodLevel <= 0){
+    } else if (this.foodLevel <= 0) {
       return true;
     }
     if (this.moodLevel < 20) {
       return false;
-    } else if (this.moodlevel >= 20){
+    } else if (this.moodlevel >= 20) {
       return true;
     }
   }
