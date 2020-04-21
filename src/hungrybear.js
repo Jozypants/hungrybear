@@ -10,12 +10,14 @@ export class HungryBear {
 
   setHunger() {
     setInterval(() => {
-      this.foodLevel--;
+      if (this.foodLevel > 0) {
+        this.foodLevel--;
+      }
     }, 1000);
   }
   
   feed() {
-    this.foodLevel = 10;
+    return this.foodLevel += 10;
   }
   
   gettingTired() {
@@ -42,7 +44,7 @@ export class HungryBear {
     }, 1000);
   }
   love() {
-    this.moodLevel = 0;
+    return this.moodLevel = 0;
   }
   // Static Methods //
   didYouGetEaten() {

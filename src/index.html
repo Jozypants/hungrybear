@@ -10,10 +10,18 @@
     <div class="box">
       <H1>Hungry Bear</H1>
       <h3>Take care of this grumpy bear! Make sure he gets his rest and sleep or his mood may go through the roof an he will eat you!</h3>
-      <h4>Levels</h4>
-      <h5>Food:</h5>
-      <h5>Rest:</h5>
-      <h5>Mood:</h5>
+      <div class="meter">
+        <h4>Levels</h4>
+        <h5>Food: <span id="food"></span></h5>
+        <h5>Rest: <span id="sleep"></span></h5>
+        <h5>Mood: <span id="mood"></span></h5>
+        <button id="feed" type="button" class="btn btn-dark">
+        feed me!
+        </button>
+        <button id="sleep" type="button" class="btn btn-success">Sleepy time</button>
+        <button id="love" type="button" class="btn btn-danger">Love</button>
+        <button id="status" type="button" class="btn btn-info">Status</button>
+      </div>
     </div>
   </div>
 </body>
